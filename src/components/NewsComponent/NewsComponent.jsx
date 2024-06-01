@@ -12,8 +12,9 @@ const NewsComponent = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=startup&apiKey=36146f27127d45dd94a4e4e484eca95d&pageSize=5`);
-        setNews(response.data.articles);
+        const response = await axios.get(`https://api.thenewsapi.com/v1/news/top?api_token=WRIlSVrST4ZWvBDQyBiokHn3fSB6ycWUbIX0VwgJ&locale=us&limit=3&search=startup`);
+        // Assuming response.data contains an array of articles
+        setNews(response.data.data);
       } catch (error) {
         console.error('Error fetching news:', error);
       }
@@ -38,6 +39,7 @@ const NewsComponent = () => {
       <Slider {...settings}>
         {news.map((article, index) => (
           <div key={index}>
+            {/* Assuming each article has a 'url' property */}
             <Microlink url={article.url} className="rounded-xl shadow-lg p-4" />
           </div>
         ))}
