@@ -1,9 +1,9 @@
 import {
-  LightBulbIcon, 
-  AcademicCapIcon, 
-  RocketLaunchIcon, 
-  BriefcaseIcon, 
-  CommandLineIcon, 
+  LightBulbIcon,
+  AcademicCapIcon,
+  RocketLaunchIcon,
+  BriefcaseIcon,
+  CommandLineIcon,
   TrophyIcon
 } from '@heroicons/react/24/solid'
 import pic1 from '../assets/photos/pic1.jpg'
@@ -52,12 +52,12 @@ export const results = [
         subtitle: "Tagore International Senior Secondary School",
         date: "2019 - 2021",
         location: "Sanhewal, Punjab",
-        text:[]
+        text: []
       }
     ]
   },
   {
-    icon: <RocketLaunchIcon className='text-yellow-500'/>,
+    icon: <RocketLaunchIcon className='text-yellow-500' />,
     header: "Skills",
     title: "My Skills",
     description: "Proficient in various programming languages and tools, with a keen eye for solving complex problems. Strong analytical and debugging skills, with experience in full-stack development. Continuously seeking to learn and adapt to new technologies",
@@ -94,7 +94,7 @@ export const results = [
     ]
   },
   {
-    icon: <BriefcaseIcon className='text-green-500'/>,
+    icon: <BriefcaseIcon className='text-green-500' />,
     header: "Experience",
     title: "My Experience",
     description: "Extensive experience in both technical and non-technical roles across various industries. Proven ability to lead projects and collaborate effectively with cross-functional teams. Adept at managing multiple tasks and delivering results within deadlines",
@@ -116,7 +116,7 @@ export const results = [
         subtitle: "Simon Fraser University",
         date: "Sept 2023 - Dec 2023",
         location: "Burnaby, BC",
-        text:[
+        text: [
           "• Studied, implemented, and reviewed various existing tutorials for an open-source human body tracker, contributing to a 30% improvement in understanding and utilization of the tool.",
           "• Integrated and enhanced collected data for human poses, aiding in a 25% increase in data accuracy and completeness.",
           "• Conducted experimental studies and documented case studies, facilitating the project’s objectives and providing valuable insights for future development efforts."
@@ -125,7 +125,7 @@ export const results = [
     ]
   },
   {
-    icon: <CommandLineIcon className='text-blue-500'/>,
+    icon: <CommandLineIcon className='text-blue-500' />,
     header: "Projects",
     title: "My Projects",
     description: "Successfully developed and deployed multiple projects, showcasing versatility and innovation. Experience in building web applications, and software solutions. Demonstrated ability to handle project lifecycles from concept to completion",
@@ -141,7 +141,7 @@ export const results = [
     ]
   },
   {
-    icon: <TrophyIcon className='text-red-500'/>,
+    icon: <TrophyIcon className='text-red-500' />,
     header: "Extra Curriculars",
     title: "My Extra Curriculars",
     description: "Engaged in diverse extracurricular activities, demonstrating leadership and teamwork skills. Committed to personal growth and contributing positively to society",
@@ -194,7 +194,7 @@ export const resumeAbout = {
 
 export const projects = [
   {
-    icon: <CommandLineIcon className='text-blue-500'/>,
+    icon: <CommandLineIcon className='text-blue-500' />,
     header: "Library Management System",
     title: "Library Management System",
     description: "Manages books, patrons, and loans efficiently. Streamlines library operations. Provides essential functionalities for book cataloging and patron records. Includes administrative tools for library staff",
@@ -216,7 +216,7 @@ export const projects = [
     ]
   },
   {
-    icon: <CommandLineIcon className='text-red-500'/>,
+    icon: <CommandLineIcon className='text-red-500' />,
     header: "S-Talk",
     title: "S-Talk",
     description: "Facilitates real-time communication between users on different terminals over a network connection. Handles keyboard input, UDP datagrams, and screen output while ensuring secure concurrent access",
@@ -238,7 +238,7 @@ export const projects = [
     ]
   },
   {
-    icon: <CommandLineIcon className='text-yellow-500'/>,
+    icon: <CommandLineIcon className='text-yellow-500' />,
     header: "Course Planner",
     title: "Course Planner",
     description: "Streamlines course management tasks for Simon Fraser University, offering features for department and course management, including course offerings and data-driven planning. Widely utilized for efficient course organization and management, ensuring reliability through robust testing",
@@ -260,7 +260,7 @@ export const projects = [
     ]
   },
   {
-    icon: <CommandLineIcon className='text-green-500'/>,
+    icon: <CommandLineIcon className='text-green-500' />,
     header: "Yelp Database Management Application",
     title: "Yelp Database Management Application",
     description: "Enables user interaction with a Yelp-like database via Python. Offers login, search, friendship, and review features in a user-friendly GUI. Enhances user experience with robust search and review capabilities",
@@ -283,7 +283,7 @@ export const projects = [
     ]
   },
   {
-    icon: <CommandLineIcon className='text-blue-500'/>,
+    icon: <CommandLineIcon className='text-blue-500' />,
     header: "Process Control Block",
     title: "Process Control Block",
     description: "Simulates a process scheduler in a multitasking operating system using C. It handles operations like process creation, scheduling, inter-process communication, and semaphore operations. The simulation is useful for understanding and studying operating system",
@@ -305,7 +305,7 @@ export const projects = [
     ]
   },
   {
-    icon: <CommandLineIcon className='text-red-500'/>,
+    icon: <CommandLineIcon className='text-red-500' />,
     header: "Unix ls",
     title: "Unix ls",
     description: "A simple implementation of the Unix ls command in C. It provides a way to list files and directories in a given path. The tool has options for long listing, which displays detailed information about the files and directories, and showing inode numbers. It is designed to mimic the functionality of the original ls command in Unix-based systems",
@@ -327,7 +327,7 @@ export const projects = [
     ]
   },
   {
-    icon: <CommandLineIcon className='text-yellow-500'/>,
+    icon: <CommandLineIcon className='text-yellow-500' />,
     header: "Fort Attack",
     title: "Fort Attack",
     description: "A game developed in Java, named Fort Attack. The game allows players to engage in strategic battles by destroying opponent's forts. Each fort in the game is made up of cells, and the objective is to destroy the opponent's forts by hitting their cells",
@@ -353,17 +353,17 @@ export const projects = [
 export const items = [
   {
     icon:
-    <div className="grid md:auto-rows-[8rem] grid-cols-2 md:grid-cols-2 gap-1">
-      <div className="md:col-span-1 md:row-span-1 overflow-hidden">
-        <img className="h-full w-full object-cover rounded-tl-xl" src={sfu} alt="" />
+      <div className="grid auto-rows-[7rem] sm:auto-rows-[8rem] grid-cols-2 gap-1">
+        <div className="col-span-1 row-span-1">
+          <img className="h-full w-full object-cover rounded-l-xl sm:rounded-none sm:rounded-tl-xl" src={sfu} alt="" />
+        </div>
+        <div className="sm:col-span-1 sm:row-span-2 hidden sm:block">
+          <img className="h-full w-full object-cover rounded-r-xl" src={pic1} alt="" />
+        </div>
+        <div className="sm:col-span-1 sm:row-span-1">
+          <img className="h-full w-full object-cover rounded-r-xl sm:rounded-none sm:rounded-bl-xl" src={vancouver} alt="" />
+        </div>
       </div>
-      <div className="md:col-span-1 md:row-span-2 overflow-hidden">
-        <img className="h-full w-full object-cover rounded-r-xl" src={pic1} alt="" />
-      </div>
-      <div className="md:col-span-1 md:row-span-1 overflow-hidden">
-        <img className="h-full w-full object-cover rounded-bl-xl" src={vancouver} alt="" />
-      </div>
-    </div>
     ,
   },
   {

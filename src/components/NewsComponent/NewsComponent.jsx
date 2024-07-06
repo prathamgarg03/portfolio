@@ -34,7 +34,7 @@ const NewsComponent = () => {
   };
 
   return (
-    <div>
+    <div className='hidden sm:block'>
       <h2 className="text-xl font-bold mb-4">Latest News Related to Startups</h2>
       <Slider {...settings}>
         {news.map((article, index) => (

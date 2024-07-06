@@ -38,23 +38,15 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "rounded-xl group/bento transition duration-200 shadow-input border border-transparent justify-between flex flex-col space-y-4 p-1",
+        "rounded-xl group/bento transition duration-200 shadow-input border border-transparent p-1",
         className
       )}
     >
-      <div>
-        <div className="font-bold text-neutral-600 mb-2 mt-2 flex items-center space-x-2">
-          {title}
-        </div>
-        <div className="font-normal text-neutral-600 text-xs">
-          {description}
-        </div>
-        {carousel ? (
-          <NewsComponent />
-        ) : (
-          icon
-        )}
-      </div>
+      {carousel ? (
+        <NewsComponent />
+      ) : (
+        icon
+      )}
     </div>
   );
 };
