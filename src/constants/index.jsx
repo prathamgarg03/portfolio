@@ -211,7 +211,7 @@ export const projects = [
           "• Integrated Resend for seamless email delivery and developed a suite of RESTful APIs to power core functionalities.",
           "• Demonstrated full-stack expertise by creating a responsive, secure, and user-friendly application that prioritizes privacy and seamless user experience."
         ],
-        liveLink: "https://prathamgarg03.github.io/Library-Management-System/",
+        liveLink: "https://github.com/prathamgarg03/secret-line",
         githubLink: "https://secret-line.prathamgarg.com"
       },
     ]
