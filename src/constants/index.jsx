@@ -194,6 +194,29 @@ export const resumeAbout = {
 
 export const projects = [
   {
+    icon: <CommandLineIcon className='text-green-500' />,
+    header: "Secret Line",
+    title: "Secret Line",
+    description: "Secret Line is an anonymous messaging platform that features robust user authentication with email verification, an intuitive dashboard for managing messages, a unique link-sharing system for anonymous communication, seamless email delivery via Resend, and a suite of RESTful APIs to support its core functionalities",
+    link: "https://github.com/prathamgarg03/secret-line",
+    content: [
+      {
+        title: "",
+        subtitle: "",
+        date: "",
+        location: "",
+        text: [
+          "• Engineered and launched Secret Line, a cutting-edge anonymous messaging platform leveraging Next.js, MongoDB, and NextAuth. Implemented robust user authentication with email verification.",
+          "• Designed an intuitive dashboard for message management, and crafted a unique link-sharing system for anonymous communication.",
+          "• Integrated Resend for seamless email delivery and developed a suite of RESTful APIs to power core functionalities.",
+          "• Demonstrated full-stack expertise by creating a responsive, secure, and user-friendly application that prioritizes privacy and seamless user experience."
+        ],
+        liveLink: "https://prathamgarg03.github.io/Library-Management-System/",
+        githubLink: "https://secret-line.prathamgarg.com"
+      },
+    ]
+  },
+  {
     icon: <CommandLineIcon className='text-blue-500' />,
     header: "Library Management System",
     title: "Library Management System",
