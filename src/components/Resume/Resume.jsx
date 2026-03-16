@@ -3,10 +3,16 @@ import { Card } from '../Card/Card';
 import About from '../About/About';
 import { results, resumeAbout } from '../../constants/index.jsx';
 import DrawerDefault from '../Drawer/DrawerDefault';
+import { Helmet } from 'react-helmet-async';
 
 function Resume() {
   return (
-    <div className='mt-5 max-w-5xl mx-auto'>
+    <>
+      <Helmet>
+        <title>Resume | Pratham Garg - SFU Computing Science</title>
+        <meta name="description" content="View the resume of Pratham Garg. Education at Simon Fraser University, skills in React, Python, Java, and software engineering experience." />
+      </Helmet>
+      <div className='mt-5 max-w-5xl mx-auto'>
       <div className='ml-4'>
         <div className='text-2xl font-bold'>Pratham Garg</div>
         <div className='text-sm mb-3'>Computer Science Student at SFU</div>
@@ -26,6 +32,7 @@ function Resume() {
       </div>
       <hr className='text-skin-200 my-[1rem] sm:my-[2rem]' />
     </div>
+    </>
   );
 }
 
