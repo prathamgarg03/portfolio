@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/photos/logo.png';
 import Search from '../Search/Search';
 
@@ -7,9 +7,9 @@ export default function Home() {
     return (
         <div className="flex justify-center mt-8 sm:mt-16">
             <div className="flex flex-col items-center mt-8 sm:mt-16">
-                <Link className='flex flex-col items-center mb-4 sm:mb-8'>
+                <div className='flex flex-col items-center mb-4 sm:mb-8'>
                     <img src={logo} className="w-1/2 sm:w-1/3 mb-2" alt="Logo" />
-                </Link>
+                </div>
                 <div className='w-11/12 sm:w-2/3 md:w-1/2'>
                     <Search />
                 </div>

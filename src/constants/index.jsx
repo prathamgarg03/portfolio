@@ -43,7 +43,7 @@ export const results = [
       {
         title: "Bachelor of Science in Computer Science",
         subtitle: "Simon Fraser University",
-        date: "Expexted 2026",
+        date: "Expected 2026",
         location: "Burnaby, BC",
         text: ["Data Structures, Algorithms, Operating Systems, and Full Stack Web Development."]
       },
@@ -154,7 +154,7 @@ export const results = [
         location: "Tallinn, Estonia",
         text: [
           "• Participated in the Robotex International Robotics Competition, competing against 500 teams from 46 countries.",
-          "• Led a team of 5 members to design and build a robot capable of completing complex tasks, resulting in a quater-finals spot at the competition.",
+          "• Led a team of 5 members to design and build a robot capable of completing complex tasks, resulting in a quarter-finals spot at the competition.",
           "• Received the ”Best Team Work” Award, celebrating our collaborative success."
         ]
       },
@@ -211,8 +211,8 @@ export const projects = [
           "• Integrated Resend for seamless email delivery and developed a suite of RESTful APIs to power core functionalities.",
           "• Demonstrated full-stack expertise by creating a responsive, secure, and user-friendly application that prioritizes privacy and seamless user experience."
         ],
-        liveLink: "https://github.com/prathamgarg03/secret-line",
-        githubLink: "https://secret-line.prathamgarg.com"
+        liveLink: "https://secret-line.prathamgarg.com",
+        githubLink: "https://github.com/prathamgarg03/secret-line"
       },
     ]
   },
@@ -229,9 +229,9 @@ export const projects = [
         date: "",
         location: "",
         text: [
-          "• Provided exceptional customer service to a diverse clientele, ensuring positive customer experiences during transactions.",
-          "• Implemented effective merchandising strategies to optimize shelf stocking and enhance product visibility, contributing to increased sales.",
-          "• Collaborated with team members to achieve store targets, share product knowledge, and maintain a welcoming environment for guests"
+          "• Built a comprehensive Library Management System using Java, enabling efficient management of books, patrons, and loan records.",
+          "• Implemented core functionalities including book cataloging, patron registration, loan tracking, and administrative tools for library staff.",
+          "• Designed an intuitive user interface to streamline library operations and improve the book borrowing experience."
         ],
         liveLink: "https://prathamgarg03.github.io/Library-Management-System/",
         githubLink: "https://github.com/prathamgarg03/Library-Management-System"

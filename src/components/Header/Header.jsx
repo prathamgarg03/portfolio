@@ -29,12 +29,12 @@ function Header() {
                         <img src={logo} className="h-10 sm:h-12" alt="Logo" />
                     </Link>
                     <div className="flex justify-end items-center text-gray-700">
-                        <Link to={github} className="text-xl sm:text-2xl px-2">
+                        <a href={github} target="_blank" rel="noopener noreferrer" className="text-xl sm:text-2xl px-2">
                             <FaGithub />
-                        </Link>
-                        <Link to={linkedin} className="text-xl sm:text-2xl px-2">
+                        </a>
+                        <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-xl sm:text-2xl px-2">
                             <FaLinkedin />
-                        </Link>
+                        </a>
                     </div>
                 </div>
                 <div className="flex justify-center my-2 sm:my-0">
@@ -44,10 +44,13 @@ function Header() {
                     <ul className="flex flex-row font-medium sm:flex-row sm:space-x-8">
                         <li>
                             <NavLink
-                                exact
+                                end
                                 to="/"
-                                className="block py-2 pr-4 pl-3 duration-200 text-gray-500 border-b border-transparent hover:bg-gray-50 sm:hover:bg-transparent sm:border-0 hover:text-blue-500 sm:p-0"
-                                activeClassName="text-blue-500 border-b-2 border-blue-500"
+                                className={({ isActive }) =>
+                                    `block py-2 pr-4 pl-3 duration-200 border-b border-transparent hover:bg-gray-50 sm:hover:bg-transparent sm:border-0 hover:text-blue-500 sm:p-0 ${
+                                        isActive ? 'text-blue-500 border-b-2 border-blue-500' : 'text-gray-500'
+                                    }`
+                                }
                             >
                                 Home
                             </NavLink>
@@ -55,8 +58,11 @@ function Header() {
                         <li>
                             <NavLink
                                 to="/resume"
-                                className="block py-2 pr-4 pl-3 duration-200 text-gray-500 border-b border-transparent hover:bg-gray-50 sm:hover:bg-transparent sm:border-0 hover:text-blue-500 sm:p-0"
-                                activeClassName="text-blue-500 border-b-2 border-blue-500"
+                                className={({ isActive }) =>
+                                    `block py-2 pr-4 pl-3 duration-200 border-b border-transparent hover:bg-gray-50 sm:hover:bg-transparent sm:border-0 hover:text-blue-500 sm:p-0 ${
+                                        isActive ? 'text-blue-500 border-b-2 border-blue-500' : 'text-gray-500'
+                                    }`
+                                }
                             >
                                 Resume
                             </NavLink>
@@ -64,8 +70,11 @@ function Header() {
                         <li>
                             <NavLink
                                 to="/projects"
-                                className="block py-2 pr-4 pl-3 duration-200 text-gray-500 border-b border-transparent hover:bg-gray-50 sm:hover:bg-transparent sm:border-0 hover:text-blue-500 sm:p-0"
-                                activeClassName="text-blue-500 border-b-2 border-blue-500"
+                                className={({ isActive }) =>
+                                    `block py-2 pr-4 pl-3 duration-200 border-b border-transparent hover:bg-gray-50 sm:hover:bg-transparent sm:border-0 hover:text-blue-500 sm:p-0 ${
+                                        isActive ? 'text-blue-500 border-b-2 border-blue-500' : 'text-gray-500'
+                                    }`
+                                }
                             >
                                 Projects
                             </NavLink>

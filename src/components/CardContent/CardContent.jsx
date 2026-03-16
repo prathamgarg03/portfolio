@@ -1,5 +1,5 @@
 import React from 'react'
-import Microlink from '@microlink/react'
+import LinkPreview from '../LinkPreview/LinkPreview'
 
 function CardContent({selectedCard}) {
   return (
@@ -21,9 +21,9 @@ function CardContent({selectedCard}) {
                     ))}
                 </div>
                     
-                <div className='mt-4'>
-                    {item.githubLink && <Microlink url={item.githubLink} className=" rounded-xl mb-2"/>}
-                    {item.liveLink && <Microlink url={item.liveLink} className=" rounded-xl"/>}
+                <div className='mt-4 space-y-2'>
+                    {item.githubLink && <LinkPreview url={item.githubLink} type="github" />}
+                    {item.liveLink && <LinkPreview url={item.liveLink} type="live" />}
                 </div>
 
             </div>

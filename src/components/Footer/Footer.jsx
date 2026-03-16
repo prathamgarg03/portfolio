@@ -12,11 +12,11 @@ function Footer() {
         </p>    
         
         <div className="sm:ml-auto sm:mt-0 mt-4 flex justify-center sm:justify-start">
-          <a href={github} className="text-gray-500 ml-3">
-            <FaLinkedin />
-          </a>
-          <a href={linkedin} className="text-gray-500 ml-3">
+          <a href={github} target="_blank" rel="noopener noreferrer" className="text-gray-500 ml-3">
             <FaGithub />
+          </a>
+          <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 ml-3">
+            <FaLinkedin />
           </a>
         </div>
       </div>
