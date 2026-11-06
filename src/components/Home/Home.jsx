@@ -1,41 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import logo from '../../assets/photos/logo.png';
-import Search from '../Search/Search';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-
+import portrait from '../../assets/photos/pic1.jpg';
+import campus from '../../assets/photos/sfu.png';
 export default function Home() {
-    return (
-        <React.Fragment>
-            <Helmet>
-                <title>Pratham Garg | Computing Science Student at SFU</title>
-                <meta name="description" content="Portfolio of Pratham Garg, a Computing Science student at Simon Fraser University. View my projects, skills, and software development experience." />
-            </Helmet>
-            <div className="flex justify-center mt-8 sm:mt-16">
-                <div className="flex flex-col items-center mt-8 sm:mt-16">
-                    <div className='flex flex-col items-center mb-4 sm:mb-8'>
-                        <img src={logo} className="w-1/2 sm:w-1/3 mb-2" alt="Logo" />
-                    </div>
-                    <div className='w-11/12 sm:w-2/3 md:w-1/2'>
-                        <Search />
-                    </div>
-                    
-                    <div className="flex flex-row mt-7">
-                        <NavLink
-                            to="/resume"
-                            className="py-2 px-4 mx-1 sm:mx-3 mb-2 sm:mb-0 bg-gray-50 text-gray-600 rounded-md hover:ring-gray-200 hover:ring-1"
-                        >
-                            Resume
-                        </NavLink>
-                        <NavLink
-                            to="/projects"
-                            className="py-2 px-4 mx-1 sm:mx-3 bg-gray-50 text-gray-600 rounded-md hover:ring-gray-200 hover:ring-1"
-                        >
-                            Projects
-                        </NavLink>
-                    </div>
-                </div>
-            </div>
-        </React.Fragment>
-    );
+  return <><Helmet><title>Pratham Garg | Software Developer</title></Helmet><section className="hero"><div className="hero-top"><span>Software development</span><span>Personal portfolio</span></div><h1>PRATHAM<br/><span>GARG</span></h1><img className="portrait" src={portrait} alt="Pratham Garg in a varsity jacket against a blue sky" fetchPriority="high"/><div className="hero-note"><p>Curiosity into code.<br/>Ideas into experiences.</p><Link className="round-link" to="/projects" aria-label="Explore my work">↗</Link></div><div className="hero-bottom"><span>Computer Science · Simon Fraser University</span><Link to="/resume">The story so far ↗</Link></div></section><section className="intro section"><p className="eyebrow">Behind the code</p><div><h2>A builder.<br/>A problem solver.<br/><span>Always learning.</span></h2><p className="body-copy">I’m Pratham, a Computer Science student at Simon Fraser University. I build software that connects people, simplifies everyday tasks, and turns complex problems into useful tools.</p><Link className="text-link" to="/resume">More about me ↗</Link></div></section><section className="featured section"><div className="section-heading"><h2>SELECTED<br/>WORK</h2><Link className="text-link" to="/projects">Explore all projects ↗</Link></div><Link className="feature-project" to="/projects#secret-line"><div className="message-art" aria-hidden="true"><span>Someone has something to say.</span><strong>hello,<br/>stranger.</strong><span className="message-chip">A little mystery. A real connection. ↗</span></div><div className="feature-caption"><h3>Secret Line</h3><span>Anonymous messaging / Next.js + MongoDB ↗</span></div></Link><div className="work-links"><Link to="/projects#course-planner"><span>Course Planner</span><span>Java / Spring Boot ↗</span></Link><Link to="/projects#s-talk"><span>S-Talk</span><span>C / Network programming ↗</span></Link></div></section><section className="roots"><img src={campus} alt="Simon Fraser University campus" loading="lazy"/><div><p className="eyebrow">The foundations</p><h2>BIG IDEAS.<br/>SOLID ROOTS.</h2><p>From robotics competitions to systems programming and full-stack applications. Every project is another reason to keep exploring.</p><Link className="text-link" to="/resume">Explore my background ↗</Link></div></section></>;
 }

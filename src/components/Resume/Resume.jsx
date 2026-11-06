@@ -1,39 +1,5 @@
-import React from 'react';
-import { Card } from '../Card/Card';
-import About from '../About/About';
-import { results, resumeAbout } from '../../constants/index.jsx';
-import DrawerDefault from '../Drawer/DrawerDefault';
+import { results, resumeAbout } from '../../constants';
 import { Helmet } from 'react-helmet-async';
-
-function Resume() {
-  return (
-    <>
-      <Helmet>
-        <title>Resume | Pratham Garg - SFU Computing Science</title>
-        <meta name="description" content="View the resume of Pratham Garg. Education at Simon Fraser University, skills in React, Python, Java, and software engineering experience." />
-      </Helmet>
-      <div className='mt-5 max-w-5xl mx-auto'>
-      <div className='ml-4'>
-        <div className='text-2xl font-bold'>Pratham Garg</div>
-        <div className='text-sm mb-3'>Computer Science Student at SFU</div>
-      </div>
-
-      <Card />
-
-      <hr className='text-skin-200 my-[1rem] sm:my-[2rem]' />
-
-      <div className="flex flex-col sm:flex-row">
-        <div className='flex-grow mb-4 sm:mb-0'>
-          <DrawerDefault results={results} />
-        </div>
-        <div className='w-full sm:w-1/2 hidden sm:block'>
-          <About info={resumeAbout} />
-        </div>
-      </div>
-      <hr className='text-skin-200 my-[1rem] sm:my-[2rem]' />
-    </div>
-    </>
-  );
+export default function Resume() {
+ return <><Helmet><title>Resume | Pratham Garg</title></Helmet><section className="page-heading section"><p className="eyebrow">The story so far</p><h1>BUILDING.<br/>BECOMING.</h1><p>{resumeAbout.description}</p><button className="text-link print-button" onClick={() => window.print()}>Print resume ↗</button></section><div className="resume-content section">{results.filter(section => !['Objective', 'Projects'].includes(section.header)).map(section => <section className="resume-section" key={section.header}><h2>{section.header}</h2><div>{section.content.map(entry => <article key={entry.title}><div className="entry-heading"><h3>{entry.title}</h3><span>{entry.date}</span></div>{entry.subtitle && <p className="entry-subtitle">{entry.subtitle} · {entry.location}</p>}<ul>{entry.text.map(text => <li key={text}>{text.replace(/^•\s*/, '')}</li>)}</ul></article>)}</div></section>)}</div></>;
 }
-
-export default Resume;

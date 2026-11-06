@@ -1,37 +1,5 @@
-import React from 'react'
-import { projects } from '../../constants/index.jsx'
-import DrawerDefault from '../Drawer/DrawerDefault'
-import About from '../About/About.jsx'
-import { resumeAbout } from '../../constants/index.jsx'
+import { projects } from '../../constants';
 import { Helmet } from 'react-helmet-async';
-function Projects() {
-  return (
-    <>
-      <Helmet>
-        <title>Projects | Pratham Garg - Software Developer</title>
-        <meta name="description" content="Explore the software and web development projects created by Pratham Garg, Computing Science student at Simon Fraser University." />
-      </Helmet>
-      <div className='mt-5 max-w-5xl mx-auto '>
-      <div className='ml-4'>
-        <div className='text-2xl font-bold'>Projects</div>
-        <div className='text-sm'>
-          Notable Projects
-        </div>
-      </div>
-      <hr className='text-skin-200 my-[1rem] sm:my-[2rem]' />
-
-      <div className="flex flex-col sm:flex-row">
-        <div className='flex-grow mb-4 sm:mb-0'>
-          <DrawerDefault results={projects} />
-        </div>
-        <div className='w-full sm:w-1/2 hidden sm:block'>
-          <About info={resumeAbout} />
-        </div>
-      </div>
-      <hr className='text-skin-200 my-[1rem] sm:my-[2rem]' />
-    </div>
-    </>
-  )
+export default function Projects() {
+ return <><Helmet><title>Projects | Pratham Garg</title></Helmet><section className="page-heading section"><p className="eyebrow">Ideas, built.</p><h1>THE WORK<span>↘</span></h1><p>From anonymous conversations to operating systems.<br/>A collection of things I’ve made and learned from.</p></section><section className="project-list section" aria-label="Projects">{projects.map((project, i) => <article id={project.title.toLowerCase().replaceAll(' ', '-')} className="project-row" key={project.title}><span className="project-index">{String(i + 1).padStart(2, '0')}</span><div><h2>{project.title}</h2><p>{project.description}</p><a className="text-link" href={project.link}>View source on GitHub ↗</a></div><span className="project-arrow" aria-hidden="true">↗</span></article>)}</section></>;
 }
-
-export default Projects
