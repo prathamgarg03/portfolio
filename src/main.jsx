@@ -1,30 +1,27 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
-import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
+import '@fontsource/anton/400.css'
+import '@fontsource/inter-tight/400.css'
+import '@fontsource/inter-tight/500.css'
+import '@fontsource/inter-tight/600.css'
+import '@fontsource/instrument-serif/400-italic.css'
+import './index.css'
+import App from './App'
 
-import Home from './components/Home/Home'
-import Layout from './Layout'
-import Resume from './components/Resume/Resume'
-import Projects from './components/Projects/Projects'
+// Old routes still resolve; they open the single page at the matching section.
+const router = createBrowserRouter([
+  { path: '/', element: <App /> },
+  { path: '/projects', element: <App section="#work" title="Projects" /> },
+  { path: '/resume', element: <App section="#history" title="Story" /> },
+  { path: '*', element: <App /> },
+])
 
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path='/' element={<Layout />}>
-        <Route path='' element={<Home />} />
-        <Route path='resume' element={<Resume />} />
-        <Route path='projects' element={<Projects />} />
-      </Route>
-    </>
-  )
-)
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </HelmetProvider>
   </React.StrictMode>,
 )
